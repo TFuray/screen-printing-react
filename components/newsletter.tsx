@@ -1,5 +1,9 @@
-import AOS from 'aos';
+import AOS from "aos"
 export default function Newsletter() {
+  interface Netlify {
+    netlify: any
+  }
+
   return (
     <section id="getInTouch">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -62,7 +66,7 @@ export default function Newsletter() {
 
             {/* CTA form */}
             <form
-              netlify
+              data-netlify="true"
               // noValidate=""
               action=""
               className="container flex flex-col mx-auto space-y-12"
@@ -126,7 +130,9 @@ export default function Newsletter() {
                     <button
                       type="submit"
                       className="px-4 py-2 border rounded-md dark:border-gray-100"
-                    >Send</button>
+                    >
+                      Send
+                    </button>
                   </div>
                 </div>
               </fieldset>
