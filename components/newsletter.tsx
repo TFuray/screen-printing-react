@@ -1,3 +1,4 @@
+import AOS from 'aos';
 export default function Newsletter() {
   return (
     <section id="getInTouch">
@@ -52,57 +53,46 @@ export default function Newsletter() {
             <div className="mb-6 lg:mr-16 lg:mb-0 text-center lg:text-left lg:w-1/2">
               <h3 className="h3 text-white mb-2">Get in touch</h3>
               <p className="text-purple-200 text-lg">
-                Join our newsletter to get top news before anyone else.
+                Need a quote? <br />
+                Have a question?
+                <br />
+                Need help making an idea come to life?
               </p>
             </div>
 
             {/* CTA form */}
             <form
+              netlify
               // noValidate=""
               action=""
               className="container flex flex-col mx-auto space-y-12"
             >
               <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900">
-                <div className="space-y-2 col-span-full lg:col-span-1">
-                  <p className="font-medium">Personal Inormation</p>
-                  <p className="text-xs">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Adipisci fuga autem eum!
-                  </p>
-                </div>
                 <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                   <div className="col-span-full sm:col-span-3">
                     <label
-                      htmlFor="firstname"
+                      htmlFor="name"
                       className="text-sm"
                     >
-                      First name
+                      Name
                     </label>
                     <input
-                      id="firstname"
+                      id="name"
                       type="text"
-                      placeholder="First name"
+                      placeholder="Name"
                       className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900"
                     />
                     <div
                       data-lastpass-icon-root="true"
-                      style={{position: 'relative' , height: '0px' , width: '0px' , float: 'left' }}
+                      style={{
+                        position: "relative",
+                        height: "0px",
+                        width: "0px",
+                        float: "left",
+                      }}
                     ></div>
                   </div>
-                  <div className="col-span-full sm:col-span-3">
-                    <label
-                      htmlFor="lastname"
-                      className="text-sm"
-                    >
-                      Last name
-                    </label>
-                    <input
-                      id="lastname"
-                      type="text"
-                      placeholder="Last name"
-                      className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900"
-                    />
-                  </div>
+
                   <div className="col-span-full sm:col-span-3">
                     <label
                       htmlFor="email"
@@ -119,63 +109,27 @@ export default function Newsletter() {
                   </div>
                   <div className="col-span-full">
                     <label
-                      htmlFor="address"
+                      htmlFor="message"
                       className="text-sm"
                     >
-                      Address
+                      Message
                     </label>
-                    <input
-                      id="address"
-                      type="text"
+                    <textarea
+                      id="message"
                       placeholder=""
+                      rows={5}
+                      cols={40}
                       className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900"
                     />
                   </div>
-                  <div className="col-span-full sm:col-span-2">
-                    <label
-                      htmlFor="city"
-                      className="text-sm"
-                    >
-                      City
-                    </label>
-                    <input
-                      id="city"
-                      type="text"
-                      placeholder=""
-                      className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900"
-                    />
-                  </div>
-                  <div className="col-span-full sm:col-span-2">
-                    <label
-                      htmlFor="state"
-                      className="text-sm"
-                    >
-                      State / Province
-                    </label>
-                    <input
-                      id="state"
-                      type="text"
-                      placeholder=""
-                      className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900"
-                    />
-                  </div>
-                  <div className="col-span-full sm:col-span-2">
-                    <label
-                      htmlFor="zip"
-                      className="text-sm"
-                    >
-                      ZIP / Postal
-                    </label>
-                    <input
-                      id="zip"
-                      type="text"
-                      placeholder=""
-                      className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900"
-                    />
+                  <div>
+                    <button
+                      type="submit"
+                      className="px-4 py-2 border rounded-md dark:border-gray-100"
+                    >Send</button>
                   </div>
                 </div>
               </fieldset>
-
             </form>
           </div>
         </div>
