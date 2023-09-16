@@ -1,7 +1,11 @@
 import VideoThumb from '@/public/images/hero-image-01.jpg'
 import ModalVideo from '@/components/modal-video'
 
-export default function Hero() {
+interface TitleProps {
+  title?: string;
+}
+
+export default function Hero({title = "Clark's Awesome Screen Printing"}: TitleProps) {
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
@@ -24,7 +28,7 @@ export default function Hero() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4" data-aos="fade-up">Clark's Awesome <br/>Screen Printing</h1>
+            <h1 className="h1 mb-4" data-aos="fade-up">{title}</h1>
             <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">If you want your custom shirts done right the first time come to Clark</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
@@ -50,4 +54,5 @@ export default function Hero() {
       </div>
     </section>
   )
+
 }
